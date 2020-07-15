@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>xaBv SoAF Coding Challenge</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        .maincontainer{
+            margin-top:0 auto;
+            border:1px solid black;
+            padding:25px;
+        }
+        .btnwide{
+            margin-left:100px;
+            width:50%;
+        }
+        #soafout{
+            width:100%;
+        }
+        .inph{
+            margin-top:2%;
+            margin-bottom:2%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="/Index.html">Sum of All Fear</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Solve.html" title="The App">Solve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Code.html" title="Project Code Display">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/brandonvondo" target="_blank" title="My GitHub">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://xabv.netlify.app/" target="_blank" title="My Dev Portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="Coming Soon"> Blog Post/YouTube Explanation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">Sum of All Fears</h1>
+                <p class="lead">Sum of All Fears (SoAF) allows the user to input a number K and a custom array. The algorithm with run through the array and determine if any two numbers add up to K and will return true or false.</p>
+                <hr />
+
+
+            </div>
+            </div>
+            <div class="row maincontainer">
+                <div class="col-12 text-center">
+                    <input id="inpk" class="inp" placeholder="Enter K" />
+                </div>
+            </div>
+            <div class="row text-center inph">
+                <div class="col">
+                    <input id="inp1" class="inp" placeholder="Enter num1" />
+                </div>
+                <div class="col">
+                    <input id="inp2" class="inp" placeholder="Enter num2" />
+                </div>
+                <div class="col">
+                    <input id="inp3" class="inp" placeholder="Enter num3" />
+                </div>
+                <div class="col">
+                    <input id="inp4" class="inp" placeholder="Enter num4" />
+                </div>
+                <div class="col">
+                    <input id="inp5" class="inp" placeholder="Enter num5" />
+                </div>
+            </div>
+            <div class="row maincontainer">
+                <div class="col-6">
+                <button id="soafbtn" class="btn btn-dark btnwide">Find K!</button>
+                </div>
+                <div class="col-6">
+                <button id="btnclear" class="btn btn-warning btnwide">Clear</button>
+    </div>
+            </div>
+        </div>
+        <hr />
+
+
+        <div class="row">
+            <p id="soafout" class="text-center"></p>
+        </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+    $(".inp").on("keydown", function (e) { /*simple input verification that allows numbers tab and backspace*/
+       return ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode == 8 || e.keyCode == 9);
+    });
+
+    $("#soafbtn").on("click", function () {
+
+        if ($("#inpk").val() != "") { /*check to see if the user left a field blank*/
+            let k = Number($("#inpk").val()); /*pulling our top input field*/
+
+            let mysoafArray = []; /*creating a blank array*/
+            mysoafArray.push(Number($("#inp1").val())); /*pushing all of our bottom input fields into our array*/
+            mysoafArray.push(Number($("#inp2").val()));
+            mysoafArray.push(Number($("#inp3").val()));
+            mysoafArray.push(Number($("#inp4").val()));
+            mysoafArray.push(Number($("#inp5").val()));
+
+            let target = 0 /*creating two variables for use in our function later*/
+            let found = false;
+
+            for (var loop = 0; loop <= mysoafArray.length; loop++) { /*looping through our array 1 by 1*/
+                target = k - mysoafArray[loop];
+                //simple way to find a number that would add with the number we are currently on to equal our goal
+
+                if (mysoafArray.indexOf(target, loop + 1) > 0) {
+                    found = true;
+                    break; /*breaking our loop if we find an answer that works*/
+                }
+            }
+            if (found)
+                $("#soafout").html(`Your value of ${k} K was found in the array`);
+            else
+                $("#soafout").html(`Your value of ${k} K was NOT found in the array`);
+        }
+    else $("#soafout").html(`Please enter real numbers.`)
+    });
+
+    $("#btnclear").on("click", function () { /*simple button to clear the results and the input field*/
+        $("#inpk").val("");
+        $(".inp").val("");
+        $("#soafout").text("");
+    });
+    </script>
+</body>
+
+</html>
