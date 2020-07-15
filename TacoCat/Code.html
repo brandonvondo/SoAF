@@ -68,21 +68,21 @@ $("#soafbtn").on("click", function () {
 if ($("#inpk").val() != "") { /*check to see if the user left a field blank*/
 let k = Number($("#inpk").val()); /*pulling our top input field*/
 
-let mysoafArray = []; /*creating a blank array*/
-mysoafArray.push(Number($("#inp1").val())); /*pushing all of our bottom input fields into our array*/
-mysoafArray.push(Number($("#inp2").val()));
-mysoafArray.push(Number($("#inp3").val()));
-mysoafArray.push(Number($("#inp4").val()));
-mysoafArray.push(Number($("#inp5").val()));
+let soafrry = []; /*creating a blank array*/
+soafrry.push(Number($("#inp1").val())); /*pushing all of our bottom input fields into our array*/
+soafrry.push(Number($("#inp2").val()));
+soafrry.push(Number($("#inp3").val()));
+soafrry.push(Number($("#inp4").val()));
+soafrry.push(Number($("#inp5").val()));
 
 let target = 0 /*creating two variables for use in our function later*/
 let found = false;
 
-for (var loop = 0; loop <= mysoafArray.length; loop++) { /*looping through our array 1 by 1*/
-target = k - mysoafArray[loop];
+for (var loop = 0; loop <= soafrry.length; loop++) { /*looping through our array 1 by 1*/
+target = k - soafrry[loop];
 //simple way to find a number that would add with the number we are currently on to equal our goal
 
-if (mysoafArray.indexOf(target, loop + 1) > 0) {
+if (soafrry.indexOf(target, loop + 1) > 0) {
 found = true;
 break; /*breaking our loop if we find an answer that works*/
 }
