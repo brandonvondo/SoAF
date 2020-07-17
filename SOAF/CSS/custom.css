@@ -1,0 +1,357 @@
+﻿body {
+}
+.maincontainer {
+    margin-top: 0 auto;
+    border: 1px solid black;
+    padding: 25px;
+    background-color: #1E1E1E;
+}
+
+.btnwide {
+    margin-left: 100px;
+    width: 50%;
+}
+
+#soafout {
+    width: 50%;
+    margin:50px auto;
+}
+
+.inph {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+.header {
+    padding: 60px;
+    text-align: center;
+    color: #9D8285;
+    font-size: 80px;
+    background-color: #161616;
+    font-family: 'Traveling _Typewriter';
+}
+
+.header2 {
+    padding: 10px;
+    text-align: center;
+    color: #9D8285;
+    font-size: 80px;
+    background-color: #161616;
+    font-family: 'Traveling _Typewriter';
+}
+
+.navtext {
+    color: #9D8285;
+    font-size: 20px;
+    font-family: 'Traveling _Typewriter';
+}
+
+.navtext2 {
+    color: dimgrey;
+    font-size: 20px;
+    font-family: 'Traveling _Typewriter'
+}
+
+.navtext3 {
+    color: #9D8285;
+    font-size: 20px;
+    font-family: 'Traveling _Typewriter';
+    margin:50% auto;
+}
+
+.nopadding{
+    padding:0;
+}
+
+.dropup {
+    list-style: none;
+    background: #161616;
+    padding: 8px;
+    display: inline-block;
+}
+
+.dropdown .nav-link {
+    color: #161616;
+    text-decoration: none;
+}
+
+.dropdown .dropdown-menu a {
+    color: #161616;
+    background-color: #161616;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    background-color: #161616;
+}
+
+    .dropdown-menu .dropdown-item {
+        display: inline-block;
+        background-color: #161616;
+        width: 100%;
+        padding: 10px 5px;
+    }
+
+.container .dropdown .dropdown-menu a:hover {
+    color: #fff;
+    background-color: #b91773;
+    background-color: #161616;
+    border-color: #fff;
+}
+
+.dropdown-divider {
+    background-color: #9D8285;
+    color: #9D8285;
+}
+
+.bodyp {
+    font-size: 40px;
+    font-family: 'Traveling _Typewriter';
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    background-color: #161616;
+    opacity: .7;
+    color: #9D8285;
+}
+
+.bodyp2 {
+    font-size: 40px;
+    font-family: 'Traveling _Typewriter';
+    margin-top: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    background-color: #161616;
+    opacity: .7;
+    color: #9D8285;
+}
+
+#inpk {
+    padding: 1px;
+    text-align: center;
+    background-color: #161616;
+    font-family: 'Traveling _Typewriter';
+    color: #9D8285;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.inp {
+    padding: 1px;
+    text-align: center;
+    background-color: #3F3F3F;
+    font-family: 'Traveling _Typewriter';
+    color: #BCBCBC;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: none;
+    width: 70%;
+}
+
+#inpk::placeholder {
+    color: #61363D;
+}
+
+.inp::placeholder {
+    color: 212121;
+}
+
+.centerforce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html {
+    height: 100%;
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1.5s steps(16,end)
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+
+    to {
+        width: 16ch;
+    }
+}
+
+.paper {
+    background: #F2EECB;
+    color: black;
+    font-family: 'Bradley Hand ITC';
+    font-size:2vw;
+    padding:10%;
+    font-weight:bold;
+    width: 50%;
+    height: 1.5vh;
+    margin: 5% auto;
+    box-shadow:
+    /* The top layer shadow */
+    0 -1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 -10px 0 -5px #F2EECB,
+    /* The second layer shadow */
+    0 -10px 1px -4px rgba(0,0,0,0.15),
+    /* The third layer */
+    0 -20px 0 -10px #F2EECB,
+    /* The third layer shadow */
+    0 -20px 1px -9px rgba(0,0,0,0.15);
+    /* Padding for demo purposes */
+}
+
+.papermess {
+    color: black;
+    font-family: 'Bradley Hand ITC';
+    font-size: 2vw;
+    height:10vw;
+    font-weight: bold;
+    background: #F2EECB;
+    position: relative;
+}
+
+    .papermess,
+    .papermess::before,
+    .papermess::after {
+        /* Styles to distinguish sheets from one another */
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+        border: 1px solid #bbb;
+    }
+
+        .papermess::before,
+        .papermess::after {
+            content: "";
+            position: absolute;
+            height: 95%;
+            width: 99%;
+            background-color: #F2EECB;
+        }
+
+        .papermess::before {
+            right: 15px;
+            top: 0;
+            transform: rotate(-1deg);
+            z-index: -1;
+        }
+
+        .papermess::after {
+            top: 5px;
+            right: -5px;
+            transform: rotate(1deg);
+            z-index: -2;
+        }
+
+
+body {
+    background: linear-gradient(181deg, #5a5a5a, #232323);
+    background-size: 400% 400%;
+    -webkit-animation: smoke 12s ease infinite;
+    -moz-animation: smoke 12s ease infinite;
+    animation: smoke 12s ease infinite;
+}
+
+@-webkit-keyframes smoke {
+    0% {
+        background-position: 50% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
+}
+
+@-moz-keyframes smoke {
+    0% {
+        background-position: 50% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
+}
+
+@keyframes smoke {
+    0% {
+        background-position: 50% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
+}
+
+.bg-grey {
+    background-color:#161616;
+}
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #161616;
+    border: solid 1px black;
+    color: #9D8285;
+    font-family: 'Traveling _Typewriter';
+    font-size: 30px;
+}
+
+#panel {
+    padding: 50px;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+#soafbtn:hover {
+    color: #61363D !important;
+}
+
+#btnclear:hover {
+    color: #d8606b !important;
+}
+
+#soafbtn:focus {
+    color: #61363D !important;
+}
+
+#btnclear:focus {
+    color: #d8606b !important;
+}
+
+#soafbtn {
+    background-color: #d8606b;
+    color: #574d4e;
+    font-weight:bold;
+    font-family:'Traveling _Typewriter';
+    font-size:20px;
+}
+
+#btnclear {
+    background-color: #574d4e;
+    color: #d8606b;
+    font-weight: bold;
+    font-family: 'Traveling _Typewriter';
+    font-size: 20px;
+}
