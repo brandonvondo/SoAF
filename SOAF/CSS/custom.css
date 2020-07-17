@@ -1,5 +1,17 @@
-﻿body {
+﻿@font-face {
+    font-family: 'Traveling_Typewriter';
+    src: url('../font/TravelingTypewriter.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Handodle';
+    src: url('../font/KBKinderWrite.ttf') format('truetype');
+}
+
+body {
+    font-family: font21186;
+}
+
 .maincontainer {
     margin-top: 0 auto;
     border: 1px solid black;
@@ -189,7 +201,7 @@ html {
 .paper {
     background: #F2EECB;
     color: black;
-    font-family: 'Bradley Hand ITC';
+    font-family: 'Handodle';
     font-size:2vw;
     padding:10%;
     font-weight:bold;
@@ -212,7 +224,7 @@ html {
 
 .papermess {
     color: black;
-    font-family: 'Bradley Hand ITC';
+    font-family: 'Handodle';
     font-size: 2vw;
     height:10vw;
     font-weight: bold;
