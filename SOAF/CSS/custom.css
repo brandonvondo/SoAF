@@ -5,13 +5,8 @@
 
 @font-face {
     font-family: 'Handodle';
-    src: url('../font/KBKinderWrite.ttf') format('truetype');
+    src: url('../font/AaronHand.ttf') format('truetype');
 }
-
-body {
-    font-family: font21186;
-}
-
 .maincontainer {
     margin-top: 0 auto;
     border: 1px solid black;
@@ -202,9 +197,8 @@ html {
     background: #F2EECB;
     color: black;
     font-family: 'Handodle';
-    font-size:2vw;
+    font-size:2.5vw;
     padding:10%;
-    font-weight:bold;
     width: 50%;
     height: 1.5vh;
     margin: 5% auto;
@@ -225,9 +219,8 @@ html {
 .papermess {
     color: black;
     font-family: 'Handodle';
-    font-size: 2vw;
+    font-size: 4vw;
     height:10vw;
-    font-weight: bold;
     background: #F2EECB;
     position: relative;
 }
